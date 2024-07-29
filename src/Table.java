@@ -101,6 +101,7 @@ public class Table extends javax.swing.JFrame {
 
         AddBtn.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         AddBtn.setText("ADD A ROW");
+        AddBtn.setEnabled(false);
         AddBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AddBtnActionPerformed(evt);
@@ -109,6 +110,7 @@ public class Table extends javax.swing.JFrame {
 
         UpdateBtn.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         UpdateBtn.setText("UPDATE A ROW");
+        UpdateBtn.setEnabled(false);
         UpdateBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 UpdateBtnMouseClicked(evt);
@@ -190,18 +192,6 @@ public class Table extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ID_FieldActionPerformed
 
-    private void ProvicyCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProvicyCheckActionPerformed
-        // TODO add your handling code here:
-        DefaultTableModel model = (DefaultTableModel)Table.getModel();
-        if (ProvicyCheck.isSelected()) {
-            AddBtn.setEnabled(true);
-            UpdateBtn.setEnabled(true);
-        } else {
-            AddBtn.setEnabled(false);
-            UpdateBtn.setEnabled(false);
-        }
-    }//GEN-LAST:event_ProvicyCheckActionPerformed
-
     private void AddBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddBtnActionPerformed
         // TODO add your handling code here:
         DefaultTableModel model = (DefaultTableModel)Table.getModel();
@@ -216,6 +206,7 @@ public class Table extends javax.swing.JFrame {
         ID_Field.setText(model.getValueAt(selectedRowIndex, 0).toString());
         Fname_Field.setText(model.getValueAt(selectedRowIndex, 1).toString());
         Lname_Field.setText(model.getValueAt(selectedRowIndex, 2).toString());
+
     }//GEN-LAST:event_TableMouseClicked
 
     private void UpdateBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UpdateBtnMouseClicked
@@ -232,6 +223,17 @@ public class Table extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Error");
         }
     }//GEN-LAST:event_UpdateBtnMouseClicked
+
+    private void ProvicyCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProvicyCheckActionPerformed
+        // TODO add your handling code here:
+        if (ProvicyCheck.isSelected()) {
+            AddBtn.setEnabled(true);
+            UpdateBtn.setEnabled(true);
+        } else {
+            AddBtn.setEnabled(false);
+            UpdateBtn.setEnabled(false);
+        }
+    }//GEN-LAST:event_ProvicyCheckActionPerformed
 
     /**
      * @param args the command line arguments
