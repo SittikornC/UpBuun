@@ -17,10 +17,10 @@ public class JTable extends javax.swing.JFrame {
      */
     public JTable() {
         initComponents();
-        populateTable();
+        myTable();
     }
     
-    public void populateTable() {
+    public void myTable() {
         String columnNames [] = {"ID", "First Name", "Last Name"};
         String data [][] = {{"1", "John", "Doe"}, {"2", "Jane", "Doe"}};
         DefaultTableModel model = new DefaultTableModel(data, columnNames);
