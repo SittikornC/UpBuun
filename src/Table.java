@@ -82,11 +82,6 @@ public class Table extends javax.swing.JFrame {
         OR.setText("OR");
 
         ID_Field.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        ID_Field.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ID_FieldActionPerformed(evt);
-            }
-        });
 
         Fname_Field.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
@@ -187,10 +182,6 @@ public class Table extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void ID_FieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ID_FieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ID_FieldActionPerformed
 
     private void AddBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddBtnActionPerformed
         // TODO add your handling code here:
